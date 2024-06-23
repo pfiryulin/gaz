@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\ProductType;
 
 class Category extends Model
 {
@@ -13,9 +15,9 @@ class Category extends Model
         'name',
     ];
     // protected $table = 'category';
-    public function productType(): HasMany
+    public function productTypes(): HasMany
     {
-        return $this->hasMany(ProductType::class);
+        return $this->hasMany(ProductType::class, 'category_id', 'id');
     }
     public function product(): HasMany
     {

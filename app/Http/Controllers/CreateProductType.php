@@ -18,4 +18,15 @@ class CreateProductType extends Controller
             ]
         );
     }
+    public function list(){
+        return ProductType::all();
+    }
+    public function categoryList($category)
+    {
+        $productTypes = ProductType::where('category_id', $category)->get();
+        if(count($productTypes) == 0){
+            return ['message' => 'Products not found'];
+        }
+        return $productTypes;
+    }
 }

@@ -13,4 +13,12 @@ class CreateCategory extends Controller
         $category->name = $request->input('name');
         $category->save();
     }
+    public function list()
+    {
+        $categories = Category::all();
+        if(count($categories) == 0){
+            return ['message' => 'Products not found'];
+        }
+        return $categories;
+    }
 }

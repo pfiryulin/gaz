@@ -13,6 +13,7 @@ class ProductType extends Model
         'name',
         'category_id',
     ];
+    // protected $table = 'product_type';
     public function category()
     {
         return $this->belongsTo(Category::class);

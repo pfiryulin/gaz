@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateCategory;
+use App\Http\Controllers\CreateProductType;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('category/greate', [CreateCategory::class, 'create']);
+Route::get('category/create', [CreateCategory::class, 'create']);
+Route::get('category/producttype/create', [CreateProductType::class, 'create']);

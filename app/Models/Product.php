@@ -18,6 +18,11 @@ class Product extends Model
     {
         return $this->belongsTo(ProductType::class);
     }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
     public function purchases()
     {
         return $this->hasMan(Purchases::class);

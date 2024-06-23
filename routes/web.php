@@ -24,4 +24,4 @@ Route::get('/', function () {
 Route::get('category/create', [CreateCategory::class, 'create']);
 Route::get('category/producttype/create', [CreateProductType::class, 'create']);
 Route::get('product/create', [CreateProduct::class, 'create']);
-Route::post('salers', [Salers::class, 'sale']);
+Route::get('salers', [Salers::class, 'sale']);

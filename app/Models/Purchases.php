@@ -16,6 +16,8 @@ class Purchases extends Model
         'count',
         'total_price',
         'date',
+        'category_id',
+        'product_type_id'
     ];
 
     public function bill()
@@ -25,5 +27,13 @@ class Purchases extends Model
     public function product()
     {
         return $this->belongsTo(Product::class);
+    }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    public function productType()
+    {
+        return $this->belongsTo(ProductType::class);
     }
 }

@@ -22,6 +22,7 @@ class CreateProduct extends Controller
                 'name'=>$request->input('name'),
                 'price'=>$request->input('price'),
                 'product_type_id'=>$productType->id,
+                'category_id'=>$request->input('category'),
             ]
         );
     }

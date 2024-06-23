@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('category/create', [CreateCategory::class, 'create']);
-Route::get('category/producttype/create', [CreateProductType::class, 'create']);
-Route::get('product/create', [CreateProduct::class, 'create']);
-Route::get('salers', [Salers::class, 'sale']);
+// Route::get('category/create', [CreateCategory::class, 'create']);
+// Route::get('category/producttype/create', [CreateProductType::class, 'create']);
+// Route::get('product/create', [CreateProduct::class, 'create']);
+// Route::get('salers', [Salers::class, 'sale']);

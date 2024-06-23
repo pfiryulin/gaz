@@ -22,13 +22,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/category/list',[CreateCategory::class, 'list']);
-Route::post('/category/create',[CreateCategory::class, 'create']);
-Route::post('category/producttype/create', [CreateProductType::class, 'create']);
 Route::get('category/producttype/list', [CreateProductType::class, 'list']);
 Route::get('category/producttype/list/{category}', [CreateProductType::class, 'categoryList']);
-
-Route::post('product/create', [CreateProduct::class, 'create']);
 Route::get('product/list', [CreateProduct::class, 'list']);
 Route::get('product/list/{type}', [CreateProduct::class, 'listoftype']);
+Route::get('salers/list', [Salers::class, 'list']);
 
-Route::get('salers', [Salers::class, 'sale']);
+Route::post('/category/create',[CreateCategory::class, 'create']);
+Route::post('category/producttype/create', [CreateProductType::class, 'create']);
+Route::post('product/create', [CreateProduct::class, 'create']);
+Route::post('salers', [Salers::class, 'sale']);
+Route::post('salers/list/period', [Salers::class, 'listPeriod']);
